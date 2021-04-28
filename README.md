@@ -1,15 +1,15 @@
 # WhereIs
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/where_is`. To experiment with that code, run `bin/console` for an interactive prompt.
+Where-is allows us to write rails where queries using standard ruby _CODE!_
 
-TODO: Delete this and the text above, and describe your gem
+This is a WIP/proof of concept/bad idea GEM, beware using this in a production environment.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'where_is'
+gem 'where-is'
 ```
 
 And then execute:
@@ -18,11 +18,48 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install where_is
+    $ gem install where-is
 
 ## Usage
 
-TODO: Write usage instructions here
+Where you may use:
+
+```
+  User.where("created_at > ?", 1.day.ago)
+```
+
+You can instead use:
+
+```
+  User.where.is{created_at > 1.day.ago}
+```
+
+Or where you may use:
+
+```
+  User.where("name LIKE '%Sam%'")
+```
+
+You can instead use:
+
+```
+  User.where.is{name =~ 'Sam'}
+```
+
+And the best part is, it uses Arel so we can leverage all the usual Arel benefits.
+
+other methods include:
+
+```
+>
+>=
+<
+<=
+==
+!=
+=~
+in?
+```
 
 ## Development
 
@@ -32,7 +69,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/where_is. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/where_is/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/hoppelite/where-is. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/hoppelite/where-is/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -40,4 +77,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the WhereIs project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/where_is/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the WhereIs project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/hoppelite/where-is/blob/master/CODE_OF_CONDUCT.md).

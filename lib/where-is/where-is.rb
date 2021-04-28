@@ -1,3 +1,8 @@
+# We need to init this first or Rails gets upset
+module ActiveRecord::Relation::QueryMethods
+
+end
+
 module ActiveRecord::QueryMethods
   class WhereIsArel
     attr_accessor :arel_field
@@ -28,6 +33,11 @@ module ActiveRecord::QueryMethods
 
     def !=(other)
       arel_field.not_eq parse_other(other)
+    end
+
+    def =~(other)
+      other = other.source if other.is_a?(Regexp)
+      arel_field.matches_regexp parse_other(other)
     end
 
     def in?(other)
@@ -62,14 +72,14 @@ module ActiveRecord::QueryMethods
 
   class WhereChain
     def is(&block)
-      opts = sanitize_forbidden_attributes WhereIs.new(arel_table, &block).result
-      where_clause = @scope.send(:where_clause_factory).build(opts, {})
-      @scope.where_clause += where_clause
+      arel_table = @scope.klass.arel_table
 
-      @scope
+      @scope.where WhereIs.new(arel_table, &block).result
     end
 
     def is_not &block
+      arel_table = @scope.klass.arel_table
+
       self.not WhereIs.new(arel_table, &block).result
     end
   end
