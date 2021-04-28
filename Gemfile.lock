@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    where-is (0.2.0)
+    where-is-rails (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -49,7 +49,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.7)
-  where-is!
+  where-is-rails!
 
 BUNDLED WITH
    2.1.4

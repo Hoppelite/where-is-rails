@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require_relative "lib/where-is/version"
+require_relative "lib/where-is-rails/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "where-is"
+  spec.name          = "where-is-rails"
   spec.version       = WhereIs::VERSION
   spec.authors       = ["Sam Boyne"]
   spec.email         = ["hoppelite@gmail.com"]
 
   spec.summary       = "A better where"
   spec.description   = "Builds an Arel where using standard syntax"
-  spec.homepage      = "https://github.com/Hoppelite/where-is"
+  spec.homepage      = "https://github.com/Hoppelite/where-is-rails"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/Hoppelite/where-is"
-  spec.metadata["changelog_uri"] = "https://github.com/Hoppelite/where-is"
+  spec.metadata["source_code_uri"] = "https://github.com/Hoppelite/where-is-rails"
+  spec.metadata["changelog_uri"] = "https://github.com/Hoppelite/where-is-rails"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

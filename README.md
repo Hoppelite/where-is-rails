@@ -1,6 +1,6 @@
 # WhereIs
 
-Where-is allows us to write rails where queries using standard ruby _CODE!_
+where-is-rails allows us to write rails where queries using standard ruby _CODE!_
 
 This is a WIP/proof of concept/bad idea GEM, beware using this in a production environment.
 
@@ -9,7 +9,7 @@ This is a WIP/proof of concept/bad idea GEM, beware using this in a production e
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'where-is'
+gem 'where-is-rails'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install where-is
+    $ gem install where-is-rails
 
 ## Usage
 
@@ -69,7 +69,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/hoppelite/where-is. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/hoppelite/where-is/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/hoppelite/where-is-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/hoppelite/where-is-rails/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -77,4 +77,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the WhereIs project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/hoppelite/where-is/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the WhereIs project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/hoppelite/where-is-rails/blob/master/CODE_OF_CONDUCT.md).
