@@ -2,7 +2,7 @@
 
 where-is-rails allows us to write rails where queries using standard ruby _CODE!_
 
-This is a WIP/proof of concept/bad idea GEM, beware using this in a production environment.
+This is a WIP/proof of concept/bad idea gem, beware using this in a production environment.
 
 ## Installation
 
